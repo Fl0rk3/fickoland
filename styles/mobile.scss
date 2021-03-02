@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@keyframes SlideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes SlideUp {
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes SlideLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes SlideRight {
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes ScrollIcon {
+    50% {
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --app-height: 100%;
+}
+
+html,
+body {
+    font-family: "Lato", sans-serif;
+    height: auto;
+    margin: 0;
+    z-index: -2;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.screen {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+
+    .background {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        height: calc(var(--vh, 1vh) * 100);
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    header {
+        animation: SlideDown 1s ease-out;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        background: linear-gradient(#333, transparent);
+
+        .logo {
+            font-weight: bold;
+        }
+        nav {
+            ul {
+                display: flex;
+
+                a {
+                    display: block;
+                }
+                li:first-child {
+                    padding: 0 1em;
+                }
+            }
+        }
+    }
+    .hero-mobile {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100 - 51px);
+        color: white;
+        display: grid;
+
+        .welcome-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: "Lobster";
+            font-size: 1.1em;
+        }
+
+        h1 {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .first {
+            animation: SlideLeft 1.5s ease-out;
+        }
+        .second {
+            animation: 1.5s SlideRight 1s ease-out forwards;
+            transform: translateX(100%);
+        }
+
+        .check-mobile {
+            animation: 2.5s SlideUp 1s ease-out forwards;
+            transform: translateY(100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            svg {
+                width: 40px;
+                filter: invert(1);
+                animation: 2.5s ScrollIcon 3s ease-out;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    .hero-desktop {
+        display: none;
+    }
+}
+
+.description {
+    position: relative;
+    padding: 20px 0;
+    background: #efefef;
+    color: #666;
+    h3 {
+        color: #333;
+        text-align: center;
+        font-size: 1.7em;
+        margin: 50px 0 0 0;
+        font-weight: 300;
+    }
+    .desc {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        .right {
+            text-align: center;
+            padding: 5px 20px 20px 20px;
+        }
+        .left {
+            text-align: center;
+            padding: 5px 20px 30px 20px;
+        }
+        .middle {
+            text-align: center;
+            padding: 5px 20px 30px 20px;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 250px;
+    background: #999;
+    .box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 100%;
+            height: 100%;
+            p {
+                display: block;
+                margin: 0;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .left {
+        position: relative;
+        background: url("../gfx/attractions.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .right {
+        position: relative;
+        background: url("../gfx/contact.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.7fr 1.9fr 1fr;
+    background: #333;
+    padding: 0 20px;
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: -10px;
+    .left {
+        color: #ddd;
+    }
+    .center {
+        font-size: 1.09em;
+    }
+    .right {
+        margin-top: 10px;
+    }
+    .bottom {
+        margin-top: 15px;
+        color: #666;
+    }
+
+    h3 {
+        margin: 0;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    a {
+        color: #ddd;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+//####tablet view
+
+@media only screen and (min-width: 480px) and (max-width: 896px) and (orientation: landscape) {
+    .background {
+        width: 100vw;
+        object-fit: cover;
+    }
+    .description {
+        .desc {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    footer {
+        font-size: 0.9em;
+    }
+    @media only screen and (max-width: 667px) {
+        footer {
+            font-size: 0.5em;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .screen {
+        header {
+            font-size: 1.5em;
+        }
+        .hero {
+            .welcome {
+                font-size: 1.75em;
+            }
+            .check {
+                font-size: 1.5em;
+            }
+        }
+    }
+    .description {
+        .desc {
+            h3 {
+                font-size: 1.5em;
+            }
+            font-size: 1.5em;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    .buttons {
+        font-size: 1.5em;
+    }
+    footer {
+        font-size: 1.2em;
+    }
+}
