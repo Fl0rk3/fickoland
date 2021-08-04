@@ -1,0 +1,220 @@
+@keyframes SlideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes SlideUp {
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes SlideLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes SlideRight {
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes ScrollIcon {
+    50% {
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --app-height: 100%;
+}
+
+
+
+.screen {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+
+    .background {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        height: calc(var(--vh, 1vh) * 100);
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    header {
+        animation: SlideDown 1s ease-out;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        background: linear-gradient(#333, transparent);
+
+        .logo {
+            font-weight: bold;
+        }
+        nav {
+            ul {
+                display: flex;
+
+                a {
+                    display: block;
+                }
+                li:first-child {
+                    padding: 0 1em;
+                }
+            }
+        }
+    }
+    .hero-mobile {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100 - 51px);
+        color: white;
+        display: grid;
+
+        .welcome-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: "Lobster";
+            font-size: 1.1em;
+        }
+
+        h1 {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .first {
+            animation: SlideLeft 1.5s ease-out;
+        }
+        .second {
+            animation: 1.5s SlideRight 1s ease-out forwards;
+            transform: translateX(100%);
+        }
+
+        .check-mobile {
+            animation: 2.5s SlideUp 1s ease-out forwards;
+            transform: translateY(100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            svg {
+                width: 40px;
+                filter: invert(1);
+                animation: 2.5s ScrollIcon 3s ease-out;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    .hero-desktop {
+        display: none;
+    }
+}
+
+.description {
+    position: relative;
+    padding: 20px 0;
+    background: #efefef;
+    color: #666;
+    h3 {
+        color: #333;
+        text-align: center;
+        font-size: 1.7em;
+        margin: 50px 0 0 0;
+        font-weight: 300;
+    }
+    .desc {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        .info{
+            text-align: center;
+            padding: 5px 20px 30px 20px;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.buttons {
+    .left {
+        background: url("../gfx/attractions.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .right {
+        background: url("../gfx/contact.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+//#### TABLET VIEW ####
+
+@media only screen and (min-width: 480px) and (max-width: 896px) and (orientation: landscape) {
+    .description {
+        .desc {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .screen {
+        header {
+            font-size: 1.5em;
+        }
+        .hero {
+            .welcome {
+                font-size: 1.75em;
+            }
+            .check {
+                font-size: 1.5em;
+            }
+        }
+    }
+    .description {
+        .desc {
+            h3 {
+                font-size: 1.5em;
+            }
+            font-size: 1.5em;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
