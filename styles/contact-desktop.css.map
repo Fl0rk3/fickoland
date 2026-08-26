@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "contact-desktop.scss"
-    ],
-    "names": [],
-    "file": "contact-desktop.css"
-}
+{"version":3,"sources":["contact-desktop.scss","contact-desktop.css"],"names":[],"mappings":"AAGA;EACI,aAAA;EACA,sBAAA;EACA,YAAA;EACA,mBAAA;EACA,mBAAA;ACFJ;ADII;EACI,kBAAA;EACA,cAAA;EACA,iCAZO;ACUf;ADMQ;EACI,aAAA;ACJZ;ADMQ;EACI,kBAAA;EACA,kBAAA;ACJZ;ADMY;EACI,cAAA;ACJhB;ADMY;EACI,YAAA;ACJhB;ADQY;EACI,uBAAA;EACA,YAAA;EACA,cAAA;EACA,WAAA;EACA,YAAA;ACNhB;;ADaI;EACI,oCAAA;EACA,sBAAA;EACA,2BAAA;ACVR;ADaI;EACI,yCAAA;EACA,sBAAA;EACA,2BAAA;ACXR","file":"contact-desktop.css"}

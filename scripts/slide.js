@@ -17,8 +17,3 @@ new Splide('.splide_kitchen',
     {
         type: 'loop'
     }).mount();
-
-// new Splide('.splide_bathroom',
-//     {
-//         type: 'loop'
-//     }).mount();

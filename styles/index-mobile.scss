@@ -1,3 +1,6 @@
+$font-main: "Lato", sans-serif;
+$font-display: "Courgette", cursive;
+
 @keyframes SlideDown {
     0% {
         transform: translateY(-100%);
@@ -63,7 +66,10 @@
         background: linear-gradient(#333, transparent);
 
         .logo {
-            font-weight: bold;
+            font-family: $font-display;
+            font-size: 1.35em;
+            font-weight: 400;
+            line-height: 1.25;
         }
         nav {
             ul {
@@ -89,7 +95,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            font-family: "Lobster";
+            font-family: $font-display;
             font-size: 1.1em;
         }
 
@@ -148,9 +154,15 @@
     h3 {
         color: #333;
         text-align: center;
-        font-size: 1.7em;
+        font-family: $font-display;
+        font-size: 1.9em;
+        line-height: 1.25;
         margin: 50px 0 0 0;
-        font-weight: 300;
+        font-weight: 400;
+    }
+    .poem {
+        text-align: center;
+        font-style: italic;
     }
     .desc {
         display: flex;

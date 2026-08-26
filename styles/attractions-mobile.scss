@@ -1,7 +1,7 @@
 $font-main: "Lato", sans-serif;
 $font-display: "Courgette", cursive;
 
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -15,28 +15,13 @@ $font-display: "Courgette", cursive;
     }
 
     .content{
+        margin: 0 2px;
         h2{
             display: none;
         }
-        .info{
-            text-align: center;
-            margin-bottom: 5vh;
-
-            h3{
-                font-size: 3vh;
-            }
-            a{
-                color: black;
-            }
-        }
-        .map{
-            &-google{
-                border: 1px solid black;
-                margin: auto;
-                display: block;
-                width: 50vw;
-                height: 50vh;
-            }
+        a{
+            color: black;
+            text-decoration: underline;
         }
     }
 }
@@ -49,7 +34,7 @@ $font-display: "Courgette", cursive;
     }
 
     .right {
-        background: url("../gfx/attractions.png");
+        background: url("../gfx/contact.png");
         background-size: cover;
         background-position: center;
     }

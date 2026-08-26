@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Courgette&display=swap");
+
+$font-main: "Lato", sans-serif;
+$font-display: "Courgette", cursive;
 
 html,
 body {
-    font-family: "Lato", sans-serif;
+    font-family: $font-main;
     height: auto;
     margin: 0;
     z-index: -2;
@@ -47,7 +49,9 @@ footer{
                 p {
                     display: block;
                     margin: 0;
-                    font-size: 1.5em;
+                    font-family: $font-display;
+                    font-size: 1.7em;
+                    line-height: 1.2;
                 }
             }
         }
